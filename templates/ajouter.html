@@ -1,0 +1,87 @@
+
+{% extends "base.html" %}
+
+{% block titre %}Ajouter une tâche — Mes tâches{% endblock %}
+
+{% block contenu %}
+<section class="ajouter-page">
+    <div class="ajouter-entete">
+        <p class="sur-titre">ORGANISATION</p>
+        <h2>Ajouter une tâche</h2>
+        <p class="description">
+            Planifie ton travail et avance étape par étape.
+        </p>
+    </div>
+
+    <form method="POST" action="{{ url_for('ajouter') }}"
+          class="form-ajouter">
+
+        <div class="champ-formulaire">
+            <label for="titre">
+                Titre de la tâche <span class="obligatoire">*</span>
+            </label>
+
+            <input
+                type="text"
+                id="titre"
+                name="titre"
+                placeholder="Ex. : Réviser les routes Flask"
+                maxlength="120"
+                required
+                autocomplete="off"
+            >
+
+            <small>Choisis un titre clair et précis.</small>
+        </div>
+
+        <fieldset class="priorite-fieldset">
+            <legend>
+                Niveau de priorité
+                <span class="obligatoire">*</span>
+            </legend>
+
+            <div class="priorites">
+                <label class="priorite-option">
+                    <input type="radio" name="priorite" value="basse">
+                    <span class="priorite-contenu">
+                        <span class="priorite-badge basse">Basse</span>
+                        <small>Peut attendre</small>
+                    </span>
+                </label>
+
+                <label class="priorite-option">
+                    <input type="radio" name="priorite" value="normal"
+                           checked>
+                    <span class="priorite-contenu">
+                        <span class="priorite-badge normale">Normale</span>
+                        <small>À planifier</small>
+                    </span>
+                </label>
+
+                <label class="priorite-option">
+                    <input type="radio" name="priorite" value="haute">
+                    <span class="priorite-contenu">
+                        <span class="priorite-badge haute">Haute</span>
+                        <small>Prioritaire</small>
+                    </span>
+                </label>
+            </div>
+        </fieldset>
+
+        <div class="actions-ajouter">
+            <button type="submit" class="btn-ajouter">
+                Ajouter la tâche
+            </button>
+
+            <a href="{{ url_for('index') }}" class="btn-annuler">
+                Annuler
+            </a>
+        </div>
+    </form>
+
+    <div class="note-formulaire">
+        <span class="note-icone">i</span>
+        <p>Les champs marqués comme obligatoires doivent être remplis.</p>
+    </div>
+</section>
+{% endblock %}

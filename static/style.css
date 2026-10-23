@@ -1,0 +1,303 @@
+body {
+    font-family: sans-serif;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+header {
+    padding: 20px;
+    background-color: #222;
+    color: white;
+    border-radius: 8px;
+}
+
+nav {
+    margin-top: 12px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.filtres a {
+    color: #222;
+    text-decoration: none;
+    margin-right: 15px;
+    padding: 8px 12px;
+    background-color: #eeeeee;
+    border-radius: 5px;
+}
+
+.filtres a:hover {
+    background-color: #dddddd;
+    text-decoration: underline;
+}
+
+main {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+li {
+    margin-bottom: 12px;
+}
+
+.priorite {
+    margin-left: 10px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #666;
+    font-size: 0.9em;
+}
+.flash {
+    padding: 12px;
+    background-color: #dff0d8;
+    color: #27632a;
+    border-radius: 5px;
+}
+
+/* ===== Design de la page Ajouter une tâche ===== */
+
+.ajouter-page {
+    max-width: 650px;
+    margin: 10px auto;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.ajouter-entete {
+    margin-bottom: 30px;
+}
+
+.sur-titre {
+    margin: 0 0 10px;
+    color: #666;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.ajouter-entete h2 {
+    margin: 0 0 8px;
+    color: #222;
+    font-size: 28px;
+}
+
+.description {
+    margin: 0;
+    color: #777;
+    line-height: 1.6;
+}
+
+.champ-formulaire {
+    margin-bottom: 28px;
+}
+
+.champ-formulaire label,
+.priorite-fieldset legend {
+    display: block;
+    margin-bottom: 10px;
+    color: #292929;
+    font-weight: 600;
+}
+
+.obligatoire {
+    color: #d93025;
+}
+
+.champ-formulaire input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d6d6d6;
+    border-radius: 7px;
+    background: #fff;
+    color: #222;
+    font: inherit;
+}
+
+.champ-formulaire input:focus {
+    outline: none;
+    border-color: #555;
+    box-shadow: 0 0 0 3px rgba(34, 34, 34, 0.08);
+}
+
+.champ-formulaire input::placeholder {
+    color: #999;
+}
+
+.champ-formulaire small,
+.priorite-contenu small {
+    display: block;
+    margin-top: 8px;
+    color: #777;
+    font-size: 13px;
+}
+
+.priorite-fieldset {
+    min-width: 0;
+    margin: 0 0 32px;
+    padding: 0;
+    border: 0;
+}
+
+.priorite-fieldset legend {
+    padding: 0;
+}
+
+.priorites {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.priorite-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    padding: 12px 8px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.priorite-option:has(input:checked) {
+    border-color: #888;
+    background: #fafafa;
+}
+
+.priorite-option input {
+    margin-top: 5px;
+    accent-color: #222;
+}
+
+.priorite-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.priorite-badge.basse {
+    color: #187443;
+    background: #e3f4e9;
+}
+
+.priorite-badge.normale {
+    color: #2459a9;
+    background: #e5edfc;
+}
+
+.priorite-badge.haute {
+    color: #b42318;
+    background: #fde8e7;
+}
+
+.actions-ajouter {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.btn-ajouter,
+.btn-annuler {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    box-sizing: border-box;
+    padding: 11px 20px;
+    border: 1px solid #222;
+    border-radius: 7px;
+    font: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-ajouter {
+    background: #222;
+    color: #fff;
+}
+
+.btn-ajouter:hover {
+    background: #444;
+}
+
+.btn-annuler {
+    border-color: #ddd;
+    background: #fff;
+    color: #333;
+}
+
+.btn-annuler:hover {
+    background: #f4f4f4;
+}
+
+.note-formulaire {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 20px;
+    border-top: 1px solid #e8e8e8;
+    color: #777;
+    font-size: 13px;
+}
+
+.note-formulaire p {
+    margin: 0;
+}
+
+.note-icone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #777;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+@media (max-width: 560px) {
+    .ajouter-page {
+        padding: 22px 16px;
+    }
+
+    .ajouter-entete h2 {
+        font-size: 24px;
+    }
+
+    .priorites {
+        grid-template-columns: 1fr;
+    }
+
+    .priorite-option {
+        align-items: center;
+    }
+
+    .actions-ajouter {
+        align-items: stretch;
+        flex-direction: column;
+    }
+}
